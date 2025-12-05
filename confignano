@@ -1,0 +1,19 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": ["sway/workspaces"],
+  "modules-right": ["bluetooth", "pulseaudio", "clock"],
+
+  "bluetooth": {
+    "format": "{icon}",
+    "format-connected": "",
+    "format-disabled": "",
+    "format-disconnected": "",
+    "on-click": "blueman-manager"
+  },
+
+  "clock": {
+    "format": "{:%Y-%m-%d %H:%M:%S}"
+  }
+}
