@@ -238,13 +238,16 @@ bindsym $mod+r mode "resize"
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
 #exec /usr/sbin/gammastep -O 4500 
-input "type:keyboard" xkb_layout "de"
+input "type:keyboard" {
+    xkb_layout "de"
+    xkb_numlock enabled
+}
 exec waybar
 bindsym $mod+d exec fuzzel
 exec udiskie -t
 
 # monitor 1 (primary)
-output DP-1 resolution 2560x1440 position 0,0 primary
+output DP-1 resolution 2560x1440 position 0,0
 
 # monitor 2
-output DP-2 resolution 1920x1080 position 2560,0
+output DP-2 resolution 1920x1080 position 2560,906
