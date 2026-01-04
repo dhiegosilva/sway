@@ -237,7 +237,6 @@ bindsym $mod+r mode "resize"
 
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
-#exec /usr/sbin/gammastep -O 4500 
 input "type:keyboard" {
     xkb_layout "de"
     xkb_numlock enabled
@@ -251,3 +250,9 @@ output DP-1 resolution 2560x1440 position 0,0
 
 # monitor 2
 output DP-2 resolution 1920x1080 position 2560,906
+exec wlsunset -T 5500 -t 4500 -s 20:00 -S 06:00
+exec_always swaybg -i ~/Pictures/sumit-chinchane-jWKk-0ZBUyg-unsplash.jpg -m fill
+
+#keyring (test)
+exec_always dbus-update-activation-environment --all
+exec_always gnome-keyring-daemon --start --components=secrets
